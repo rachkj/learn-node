@@ -1,1 +1,4 @@
 - In eventloop/poll.js, what will be the order of execution? Briefly explain the order of execution w.r.t the event loop phases.
+
+The order of execution is "foo", "done", and then, depending on the completion of the asynchronous file read operation, either "Read Error" or "Data: ...". 
+The asynchronous operation allows the event loop to continue executing other tasks while waiting for the file read to complete.
